@@ -72,23 +72,24 @@
             display: inline-block; /* Ensure it aligns properly with the text */
         }
 
-
 /* About Section */
 .about-section {
     background-color: #ffffff; /* White background */
-    display: flex; /* Flexbox to align items horizontally */
-    flex-direction: row; /* Ensures the image and text are side by side */
-    align-items: center; /* Vertically align items to the center */
     padding: 40px 0; /* Adjust padding as needed */
+}
+
+.about-section .about-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center vertically */
 }
 
 .about-section img {
     width: 150px; /* Fixed size for the image */
     height: 150px; /* Ensure it's a square */
-    border-radius: 50%; /* Circular image */
-    background-color: #e0e0e0; /* Image background color */
-    object-fit: cover; /* Ensure the image covers the container */
-    margin-right: 30px; /* Adds spacing between image and text */
+    border-radius: 50%; /* Make it circular */
+    background-color: #e0e0e0; /* Background color for the image */
+    object-fit: cover; /* Ensures the image fully covers the container */
+    margin-right: 30px; /* Spacing between the image and text */
 }
 
 .about-section .about-text {
@@ -102,6 +103,7 @@
     font-weight: bold;
     margin-bottom: 20px;
 }
+
 
 
 
@@ -345,14 +347,17 @@
 <!-- About Section -->
 <section id="about" class="about-section">
     <div class="container">
-        <img src="icons/photo.png" alt="Profile Picture"> <!-- Replace with your image path -->
-        <div class="about-text">
-            <h2>About</h2>
-            <p>I am a highly motivated and results-oriented data science graduate student with a strong foundation in data analysis and management. My passion lies in leveraging the power of data to extract actionable insights and solve complex problems. Throughout my academic journey, I have honed my analytical skills and gained expertise in various data analysis and visualization tools, including Python, R, and SQL.</p>
-            <p>In my Master's program at Kent State University, I have consistently maintained a near-perfect GPA, demonstrating my dedication to academic excellence. My coursework has provided me with a deep understanding of Machine learning, database systems, and big data analytics. I am proficient in various machine learning algorithms and have successfully applied them to real-world projects.</p>
+        <div class="about-container">
+            <img src="icons/photo.png" alt="Profile Picture"> <!-- Profile picture -->
+            <div class="about-text">
+                <h2>About</h2>
+                <p>I am a highly motivated and results-oriented data science graduate student with a strong foundation in data analysis and management. My passion lies in leveraging the power of data to extract actionable insights and solve complex problems. Throughout my academic journey, I have honed my analytical skills and gained expertise in various data analysis and visualization tools, including Python, R, and SQL.</p>
+                <p>In my Master's program at Kent State University, I have consistently maintained a near-perfect GPA, demonstrating my dedication to academic excellence. My coursework has provided me with a deep understanding of Machine learning, database systems, and big data analytics. I am proficient in various machine learning algorithms and have successfully applied them to real-world projects.</p>
+            </div>
         </div>
     </div>
 </section>
+
 
 
 
