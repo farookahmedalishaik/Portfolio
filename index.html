@@ -157,47 +157,24 @@
 
 /* Experience Section */
 .experience-section {
-    background-color: #ffffff;
-    padding: 60px 0;
-}
-
-.experience-section h2 {
-    font-family: Montserrat, sans-serif;
-    font-weight: bold;
-    color: black;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.experience-section .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Ensures spacing between cards */
-}
-
-.experience-section .col-md-4 {
-    display: flex;
-    flex-direction: column;
+    background-color: #ffffff; /* White background */
 }
 
 .experience-section .card {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Same width as projects cards */
+    margin-bottom: 30px; /* Adjust space between cards */
 }
 
 .experience-section .card-img-top {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    object-position: center;
-    border-bottom: 3px solid #007bff;
+    max-width: 100%; /* Ensure images don't overflow */
+    height: 200px; /* Adjust height to match project images */
+    object-fit: cover; /* Ensures image is fully contained */
+}
+
+.experience-section .card-body {
+    height: 100px; /* Limit the height of text section */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis to truncated text */
 }
 
 .experience-section .card-title {
@@ -216,6 +193,20 @@
     color: #6c757d;
 }
 
+.experience-section .card-footer a {
+    font-weight: bold;
+    color: #3498db; /* Same link color as projects section */
+    text-decoration: none;
+}
+
+.experience-section .card-footer a:hover {
+    text-decoration: underline;
+}
+
+.experience-section .row {
+    flex-wrap: wrap; /* Ensure rows wrap for responsiveness */
+    gap: 20px; /* Same gap between cards as in the projects section */
+}
 
 
 
