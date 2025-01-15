@@ -161,7 +161,6 @@
 }
 
 .experience-section .card {
-    width: 300px; /* Same width as projects cards */
     margin-bottom: 30px; /* Adjust space between cards */
 }
 
@@ -203,11 +202,16 @@
     text-decoration: underline;
 }
 
+/* Row Layout using Bootstrap Grid */
 .experience-section .row {
     display: flex;
     flex-wrap: wrap; /* Ensure rows wrap for responsiveness */
-    gap: 5px; /* Same gap between cards as in the projects section */
 }
+
+.experience-section .col-md-4 {
+    padding: 0 15px; /* Adds space between columns */
+}
+
 
 
 
