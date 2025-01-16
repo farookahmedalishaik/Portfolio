@@ -51,39 +51,39 @@
             padding: 60px 0; /* Standard padding for all sections */
         }
 
-        /* Home Section */
-        #home {
-            padding: 100px 0; /* Add padding for proper alignment */
-        }
-
-        #home h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            font-family: Montserrat, sans-serif;
-        }
-
-        #home h2 {
-            font-size: 2rem;
-            margin-top: 20px;
-            font-family: Montserrat, sans-serif;
-        }
-
-        #typing-animation {
-            display: inline-block; /* Ensure it aligns properly with the text */
-        }
-
-/* About Section */
-.about-section {
-    background-color: #ffffff; /* White background */
-    padding: 40px 0; /* Adjust padding as needed */
+        /* Home Section (Merged with About Section) */
+#home {
+    padding: 100px 0; /* Add padding for proper alignment */
 }
 
-.about-section .about-container {
+#home h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+}
+
+#home h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    font-family: Montserrat, sans-serif;
+}
+
+#typing-animation {
+    display: inline-block; /* Ensure it aligns properly with the text */
+}
+
+/* Combined About Section (Merged into Home) */
+.home-section {
+    background-color: #ffffff; /* White background */
+}
+
+.home-section .about-container {
     display: flex; /* Use flexbox to align items horizontally */
     align-items: center; /* Center vertically */
+    margin-top: 40px; /* Add space after the name and subtitle */
 }
 
-.about-section img {
+.home-section img {
     width: 150px; /* Fixed size for the image */
     height: 150px; /* Ensure it's a square */
     border-radius: 50%; /* Make it circular */
@@ -92,18 +92,17 @@
     margin-right: 30px; /* Spacing between the image and text */
 }
 
-.about-section .about-text {
+.home-section .about-text {
     max-width: 700px; /* Limit the width of the text */
     font-size: 16px;
     line-height: 1.6;
 }
 
-.about-section h2 {
+.home-section h2 {
     font-family: Montserrat, sans-serif;
     font-weight: bold;
     margin-bottom: 20px;
 }
-
 
 
 
@@ -334,29 +333,24 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="d-flex align-items-center">
-        <div class="container text-center">
-            <h1>I'm Farook Ahmed Ali Shaik</h1>
-            <h2>
-                <span id="typing-animation"></span>
-            </h2>
-        </div>
-    </section>
-
-<!-- About Section -->
-<section id="about" class="about-section">
+<!-- Home Section (Merged with About Section) -->
+<section id="home" class="home-section">
     <div class="container">
+        <!-- Name and Subtitle (remains the same as Home section) -->
+        <h1>Farook Ahmed Ali Shiak</h1>
+        <h2 id="typing-animation">Data Professional</h2>
+
+        <!-- About Section (Now part of Home) -->
         <div class="about-container">
             <img src="icons/photo.png" alt="Profile Picture"> <!-- Profile picture -->
             <div class="about-text">
-                <h2>About</h2>
                 <p>I am a highly motivated and results-oriented data science graduate student with a strong foundation in data analysis and management. My passion lies in leveraging the power of data to extract actionable insights and solve complex problems. Throughout my academic journey, I have honed my analytical skills and gained expertise in various data analysis and visualization tools, including Python, R, and SQL.</p>
                 <p>In my Master's program at Kent State University, I have consistently maintained a near-perfect GPA, demonstrating my dedication to academic excellence. My coursework has provided me with a deep understanding of Machine learning, database systems, and big data analytics. I am proficient in various machine learning algorithms and have successfully applied them to real-world projects.</p>
             </div>
         </div>
     </div>
 </section>
+
 
 
 
