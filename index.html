@@ -60,18 +60,20 @@
 .home-section .home-content {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center content horizontally */
 }
 
+/* Profile Picture should start from the leftmost of the container */
 .home-section img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background-color: #e0e0e0;
     object-fit: cover;
-    margin-right: 30px;
+    margin-right: 30px; /* Maintain space between image and text */
+    margin-left: 0; /* Remove margin on the left side to place the image on the far left */
 }
 
+/* Name and Animated Text Section */
 .home-section .name-and-animation {
     display: flex;
     flex-direction: column;
@@ -102,6 +104,7 @@
     text-align: justify;  /* Justify the text to fill the width */
     margin: 0;  /* Remove any margins */
 }
+
 
 
 
