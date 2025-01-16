@@ -51,36 +51,14 @@
             padding: 60px 0; /* Standard padding for all sections */
         }
 
-        /* Home Section (Merged with About Section) */
+/* Home Section (Merged with About Section) */
 #home {
     padding: 100px 0; /* Add padding for proper alignment */
 }
 
-#home h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: Montserrat, sans-serif;
-}
-
-#home h2 {
-    font-size: 2rem;
-    margin-top: 20px;
-    font-family: Montserrat, sans-serif;
-}
-
-#typing-animation {
-    display: inline-block; /* Ensure it aligns properly with the text */
-}
-
-/* Combined About Section (Merged into Home) */
-.home-section {
-    background-color: #ffffff; /* White background */
-}
-
-.home-section .about-container {
-    display: flex; /* Use flexbox to align items horizontally */
+.home-section .home-content {
+    display: flex; /* Use flexbox for horizontal layout */
     align-items: center; /* Center vertically */
-    margin-top: 40px; /* Add space after the name and subtitle */
 }
 
 .home-section img {
@@ -92,17 +70,35 @@
     margin-right: 30px; /* Spacing between the image and text */
 }
 
+.home-section .name-and-animation {
+    display: flex;
+    flex-direction: column; /* Stack name and animation vertically */
+}
+
+.home-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+}
+
+.home-section h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    font-family: Montserrat, sans-serif;
+}
+
+#typing-animation {
+    display: inline-block; /* Ensure it aligns properly with the text */
+}
+
+/* About Text Section (Below Name and Animated Text) */
 .home-section .about-text {
+    margin-top: 40px; /* Add space between name and about text */
     max-width: 700px; /* Limit the width of the text */
     font-size: 16px;
     line-height: 1.6;
 }
 
-.home-section h2 {
-    font-family: Montserrat, sans-serif;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
 
 
 
@@ -336,20 +332,23 @@
 <!-- Home Section (Merged with About Section) -->
 <section id="home" class="home-section">
     <div class="container">
-        <!-- Name and Subtitle (remains the same as Home section) -->
-        <h1>Farook Ahmed Ali Shiak</h1>
-        <h2 id="typing-animation">Data Professional</h2>
-
-        <!-- About Section (Now part of Home) -->
-        <div class="about-container">
+        <!-- Profile Picture, Name, and Animated Text in a row -->
+        <div class="home-content">
             <img src="icons/photo.png" alt="Profile Picture"> <!-- Profile picture -->
-            <div class="about-text">
-                <p>I am a highly motivated and results-oriented data science graduate student with a strong foundation in data analysis and management. My passion lies in leveraging the power of data to extract actionable insights and solve complex problems. Throughout my academic journey, I have honed my analytical skills and gained expertise in various data analysis and visualization tools, including Python, R, and SQL.</p>
-                <p>In my Master's program at Kent State University, I have consistently maintained a near-perfect GPA, demonstrating my dedication to academic excellence. My coursework has provided me with a deep understanding of Machine learning, database systems, and big data analytics. I am proficient in various machine learning algorithms and have successfully applied them to real-world projects.</p>
+            <div class="name-and-animation">
+                <h1>Your Name</h1>
+                <h2 id="typing-animation">Data Professional</h2>
             </div>
+        </div>
+
+        <!-- About Text (Isolated below the profile picture and name) -->
+        <div class="about-text">
+            <p>I am a highly motivated and results-oriented data science graduate student with a strong foundation in data analysis and management. My passion lies in leveraging the power of data to extract actionable insights and solve complex problems. Throughout my academic journey, I have honed my analytical skills and gained expertise in various data analysis and visualization tools, including Python, R, and SQL.</p>
+            <p>In my Master's program at Kent State University, I have consistently maintained a near-perfect GPA, demonstrating my dedication to academic excellence. My coursework has provided me with a deep understanding of Machine learning, database systems, and big data analytics. I am proficient in various machine learning algorithms and have successfully applied them to real-world projects.</p>
         </div>
     </div>
 </section>
+
 
 
 
