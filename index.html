@@ -354,7 +354,7 @@ section {
             <img src="icons/photo.png" alt="Profile Picture"> <!-- Profile picture -->
             <div class="name-and-animation">
                 <h1>I'm Farook Ahmed Ali Shaik</h1>
-                <h2 id="typing-animation">Data Professional</h2>
+                <h2 id="typing-animation"></h2>
             </div>
         </div>
 
@@ -577,6 +577,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const text = "Data Professional";
         let charIndex = 0;
 
+        // Ensure the element starts blank
+        typingAnimationElement.textContent = '';
+
         function type() {
             if (charIndex < text.length) {
                 typingAnimationElement.textContent += text[charIndex];
@@ -596,6 +599,7 @@ document.addEventListener('DOMContentLoaded', function() {
         type();
     }
 });
+
 </script>
 
 </body>
