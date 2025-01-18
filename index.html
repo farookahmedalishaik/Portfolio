@@ -3,326 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farook Ahmed Ali Shaik - Portfolio</title>
+    <title>Farook Ahmed Ali's Portfolio</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons for social media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <style>
-   /* General Styles */
-body {
-    font-family: "Times New Roman", Times, serif;
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Dark gray text */
-    margin: 0;
-    padding-top: 70px; /* To prevent content from hiding under the navbar */
-    scroll-behavior: smooth; /* Smooth scrolling */
-}
-
-.navbar {
-    background-color: #3498db; /* Blue background for navbar */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.navbar-brand {
-    font-family: Montserrat, sans-serif;
-    font-weight: bold;
-    color: #000000; /* White text for navbar brand */
-}
-
-.nav-link {
-    color: #000000; /* text for nav links */
-    font-weight: bold; /* Make the text bold */
-}
-
-
-.nav-link:hover {
-    color: #f39c12 !important; /* A golden hover effect for nav links */
-}
-
-section {
-    text-align: center;
-    padding: 60px 0; /* Standard padding for all sections */
-}
-
-
-/* Home Section (Merged with About Section) */
-#home {
-    padding: 100px 0; /* Add padding for proper alignment */
-}
-
-/* Center the content inside .home-content */
-.home-section .home-content {
-    display: flex;
-    align-items: center;
-}
-
-/* Profile Picture should start from the leftmost of the container */
-.home-section img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #e0e0e0;
-    object-fit: cover;
-    margin-right: 30px; /* Maintain space between image and text */
-    margin-left: 0; /* Remove margin on the left side to place the image on the far left */
-}
-
-/* Name and Animated Text Section */
-.home-section .name-and-animation {
-    display: flex;
-    flex-direction: column;
-    text-align: center; /* Center the text vertically */
-}
-
-.home-section h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: Montserrat, sans-serif;
-}
-
-.home-section h2 {
-    font-size: 2rem;
-    margin-top: 20px;
-    font-family: Montserrat, sans-serif;
-}
-
-#typing-animation {
-    display: inline-block;
-}
-
-/* About Text Section (Full Width Text) */
-.home-section .about-text {
-    width: 100%;  /* Make the paragraph take up the full width of the container */
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: justify;  /* Justify the text to fill the width */
-    margin: 0;  /* Remove any margins */
-    margin-top: 1em;  /* Add 1em (one line) gap from the container above */
-}
-
-
-        
-        
-        /* Projects Section */
-        .projects-section {
-            background-color: #ffffff; /* white background */
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        
-        .projects-section .card {
-            width: 300px; /* Adjust width as needed */
+        section {
+            padding: 60px 0;
+        }
+        h2 {
+            font-size: 2.5rem;
             margin-bottom: 30px;
         }
-        .projects-section .card-body {
-           height: 100px;
-           overflow: hidden; /* Hide overflowing text */
-           text-overflow: ellipsis; /* Add ellipsis for truncated text */
+
+        /* Home Section */
+        .home-section {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding-top: 50px;
         }
-        .projects-section .card-img-top {
-            max-width: 100%; /* Ensures images don't overflow */
-            height: 200px; /* Adjust height as needed */
-        }
-
-        .projects-section .card-footer a {
-            font-weight: bold;
-            color: #3498db; /* Bright blue for links */
-            text-decoration: none;
-        }
-
-        .projects-section .card-footer a:hover {
-            text-decoration: underline;
-        }
-
-        .projects-section .row {
-            flex-wrap: wrap; /* Add this rule to make rows wrap */
-        }
-        /* Skills Section */
-        .skills-section {
-            background-color: #ffffff; /* White background */
-        }
-
-        .skills-section .skill-title {
-            font-weight: bold;
-            margin-top: 20px;
-            font-family: Montserrat, sans-serif;
-        }
-
-        .skills-section .skill-icon {
-            width: 80px;
-            height: 80px;
-        }
-
-        .skills-section .skill-text {
-            max-width: 700px;
-            margin: 20px auto;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-
-
-/* Experience Section */
-.experience-section {
-    background-color: #ffffff; /* White background */
-}
-
-.experience-section .card {
-    margin-bottom: 30px; /* Adjust space between cards */
-}
-
-.experience-section .card-img-top {
-    max-width: 100%; /* Ensure images don't overflow */
-    height: 200px; /* Adjust height to match project images */
-    object-fit: cover; /* Ensures image is fully contained */
-}
-
-.experience-section .card-body {
-    height: 100px; /* Limit the height of text section */
-    overflow: hidden; /* Hide overflowing text */
-    text-overflow: ellipsis; /* Add ellipsis to truncated text */
-}
-
-.experience-section .card-title {
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-}
-
-.experience-section .card-text {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.experience-section .card-footer {
-    font-size: 13px;
-    color: #6c757d;
-}
-
-.experience-section .card-footer a {
-    font-weight: bold;
-    color: #3498db; /* Same link color as projects section */
-    text-decoration: none;
-}
-
-.experience-section .card-footer a:hover {
-    text-decoration: underline;
-}
-/* Experience Section */
-.experience-section {
-    padding-top: 80px; /* Adjust this value according to your navbar height */
-    background-color: #ffffff; /* White background */
-}
-
-        
-/* Row Layout using Bootstrap Grid */
-.experience-section .row {
-    display: flex;
-    flex-wrap: wrap; /* Ensure rows wrap for responsiveness */
-}
-
-.experience-section .col-md-4 {
-    padding: 0 15px; /* Adds space between columns */
-}
-
-
-
-
-        /* Contact Section */
-        .contact-section {
-            background-color: #ffffff; /* White background */
-            color: #333333; /* Dark gray text */
-        }
-
-        .contact-info div {
+        .home-content {
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .home-content img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        .name-and-animation h1 {
+            font-size: 3rem;
             margin-bottom: 20px;
         }
 
-        .contact-info div i {
-            font-size: 24px;
-            margin-right: 10px;
+        /* Projects Section */
+        .projects-section .card-body {
+            padding: 1.5rem;
+        }
+        .projects-section .card-footer {
+            padding: 1rem;
+            text-align: center;
         }
 
-        .social-icons a {
-            background-color: #3498db; /* Bright blue for social icons */
-            color: white;
+        /* Skills Section */
+        .skills-section .skill-icon {
             width: 50px;
             height: 50px;
-            line-height: 50px;
-            border-radius: 50%;
-            margin: 0 10px;
-            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .skills-section .skill-title {
+            margin-top: 10px;
+        }
+
+        /* Experience Section */
+        .experience-section .card-body {
+            padding: 1.5rem;
+        }
+        .experience-section .card-footer {
+            padding: 1rem;
             text-align: center;
-            font-size: 24px;
-            transition: background-color 0.3s;
         }
 
-        .social-icons a:hover {
-            background-color: #2980b9; /* Darker blue for hover effect */
-            text-decoration: none;
+        /* Contact Section */
+        .contact-info div {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .social-icons a {
+            font-size: 2rem;
+            margin-right: 15px;
         }
 
-        /* Footer */
         footer {
-            background-color: #ffffff; /* White background */
-            color: #333333; /* Dark gray text */
             text-align: center;
-            padding: 20px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
         }
-
-
-    /* Adding the new CSS for bold black headings below */
-    .about-section h2,
-    .projects-section h2,
-    .skills-section h2,
-    .experience-section h2,
-    .contact-section h2 {
-        font-weight: bold;
-        color: black;
-        font-size: 2rem; /* Adjust size if needed */
-    }
-
-    body, p, h1, h2, h3, h4, h5, h6, li, span, a {
-    color: black;
-}
-
-
-   <style>
-  body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, button {
-      font-family: "Times New Roman", Times, serif;
-  }
-
-  .projects-section .btn-view-project {
-      color: white;
-      background-color: #007bff;
-  }
-  <style>
-  .card-img-top {
-    object-fit: cover; /* Ensures the image fills the container without stretching */
-    height: 200px; /* Set a fixed height to maintain uniformity */
-    width: 100%; /* Ensures the image spans the container's width */
-  }
-
-  .experience-section .card-img-top {
-    object-fit: contain; /* Displays the whole image while maintaining its aspect ratio */
-    background-color: #f8f9fa; /* Optional: Adds a background for contrast if the image doesn't fill */
-  }
-
-  /* Custom class for specific image cases if needed */
-  .full-image {
-    object-fit: scale-down; /* Ensures the entire image is shown without cropping */
-    max-height: 250px; /* Optional: Sets a maximum height */
-  }     
     </style>
 </head>
 <body>
@@ -338,13 +108,6 @@ section {
                     <li class="nav-item">
                         <a class="nav-link" href="#home">Home</a>
                     </li>
-
-                    <!--
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    -->
-                    
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">Projects</a>
                     </li>
@@ -362,27 +125,25 @@ section {
         </div>
     </nav>
 
-<!-- Home Section (Merged with About Section) -->
-<section id="home" class="home-section">
-    <div class="container">
-        <!-- Profile Picture, Name, and Animated Text in a row -->
-        <div class="home-content">
-            <img src="icons/photo.png" alt="Profile Picture"> <!-- Profile picture -->
-            <div class="name-and-animation">
-                <h1>I'm Farook Ahmed Ali Shaik</h1>
-                <h2 id="typing-animation"></h2>
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="container">
+            <!-- Profile Picture, Name, and Animated Text in a row -->
+            <div class="home-content">
+                <img src="icons/photo.png" alt="Profile Picture">
+                <div class="name-and-animation">
+                    <h1>I'm Farook Ahmed Ali Shaik</h1>
+                    <h2 id="typing-animation"></h2>
+                </div>
+            </div>
+
+            <!-- About Text -->
+            <div class="about-text">
+                <p>I am a highly motivated Data Science graduate student with a strong foundation in data analysis, statistical modeling, and machine learning. My passion lies in leveraging data to extract actionable insights and solve complex problems. Throughout my academic journey, I have honed my analytical skills and gained expertise in Python, R, SQL, and various machine learning models, including ensemble methods, as well as familiarity with neural networks.</p>
+                <p>Currently pursuing my Master’s at Kent State University with a 3.95 GPA, I am committed to academic excellence. My coursework has provided me with a deep understanding of machine learning, hands-on experience with frameworks such as SQLite and Flask, and proficiency in data analysis, visualization, and applying machine learning techniques to real-world challenges.</p>
             </div>
         </div>
-
-        <!-- About Text (Isolated below the profile picture and name) -->
-        <div class="about-text">
-            <p>I am a highly motivated Data Science graduate student with a strong foundation in data analysis, statistical modeling, and machine learning. My passion lies in leveraging data to extract actionable insights and solve complex problems. Throughout my academic journey, I have honed my analytical skills and gained expertise in Python, R, SQL, and various machine learning models, including ensemble methods, as well as familiarity with neural networks.</p>
-            <p>Currently pursuing my Master’s at Kent State University with a 3.95 GPA, I am committed to academic excellence. My coursework has provided me with a deep understanding of machine learning, hands-on experience with frameworks such as SQLite and Flask, and proficiency in data analysis, visualization, and applying machine learning techniques to real-world challenges.</p>
-        </div>
-    </div>
-</section>
-
-
+    </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
@@ -394,7 +155,6 @@ section {
                     <div class="card mb-4 shadow-sm">
                         <img src="icons/Cori image.jpg" class="card-img-top" alt="Project 1">
                         <div class="card-body">
-                            <!-- <h5 class="card-title">Project 1</h5> -->
                             <p class="card-text">Optimizing Resource Utilization on the NERSC Cori.</p>
                         </div>
                         <div class="card-footer text-muted">
@@ -407,7 +167,6 @@ section {
                     <div class="card mb-4 shadow-sm">
                         <img src="icons/bone fracture detection image.webp" class="card-img-top" alt="Project 2">
                         <div class="card-body">
-                            <!-- <h5 class="card-title">Project 2</h5> -->
                             <p class="card-text">Bone Fracture Detection Using R-CNN and CrackNet.</p>
                         </div>
                         <div class="card-footer text-muted">
@@ -415,13 +174,12 @@ section {
                         </div>
                     </div>
                 </div>
-                <!-- Project 3 --> 
+                <!-- Project 3 -->
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <img src="icons/telecom 2.jpeg" class="card-img-top" alt="Project 3">
                         <div class="card-body">
-                            <!-- <h5 class="card-title">Project 3</h5> -->
-                            <p class="card-text"> Telecom Customer Churn Prediction-Logistic & Ensemble</p>
+                            <p class="card-text">Telecom Customer Churn Prediction-Logistic & Ensemble</p>
                         </div>
                         <div class="card-footer text-muted">
                             <a href="https://github.com/farookahmedalishaik/Projects/tree/main/Telecommunications%20Customer%20Churn%20Prediction" target="_blank">View Project</a>
@@ -432,120 +190,115 @@ section {
         </div>
     </section>
 
-    <!-- Skills Section --> 
-    
+    <!-- Skills Section -->
     <section id="skills" class="skills-section">
-    <div class="container">
-        <h2>Skills</h2>
-        <!-- Row 1 -->
-        <div class="row d-flex justify-content-center">
-            <!-- Skill 1 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/python image.png" class="skill-icon" alt="Python">
-                <div class="skill-title">Python</div>
-            </div>
-            <!-- Skill 2 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/R.png" class="skill-icon" alt="R">
-                <div class="skill-title">R</div>
-            </div>
-            <!-- Skill 3 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/C.png" class="skill-icon" alt="C">
-                <div class="skill-title">C</div>
-            </div>
-            <!-- Skill 4 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/sql-logo.png" class="skill-icon" alt="SQL">
-                <div class="skill-title">SQL</div>
-            </div>
-            <!-- Skill 5 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/data visualization.webp" class="skill-icon" alt="Data Visualization">
-                <div class="skill-title">Data Visualization</div>
-            </div>
-        </div>
-
-        <!-- Row 2 -->
-        <div class="row d-flex justify-content-center mt-4">
-            <!-- Skill 6 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/RStudio.png" class="skill-icon" alt="RStudio">
-                <div class="skill-title">RStudio</div>
-            </div>
-            <!-- Skill 7 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/Visual Studio Code (VS Code).png" class="skill-icon" alt="VS Code">
-                <div class="skill-title">VS Code</div>
-            </div>
-            <!-- Skill 8 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/jupyter-seeklogo.png" class="skill-icon" alt="Jupyter">
-                <div class="skill-title">Jupyter</div>
-            </div>
-            <!-- Skill 9 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/GitHub.png" class="skill-icon" alt="GitHub">
-                <div class="skill-title">GitHub</div>
-            </div>
-            <!-- Skill 10 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/microsoft office.png" class="skill-icon" alt="MS Office">
-                <div class="skill-title">MS Office</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Experience Section -->
-<section id="experience" class="experience-section py-5">
-    <div class="container">
-        <h2 class="text-center">Experience</h2>
-        <div class="row">
-            <!-- Experience 1 -->
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="icons/Kent student Center.jpg" class="card-img-top" alt="Facility Operations Supervisor">
-                    <div class="card-body">
-                        <h5 class="card-title">Facility Operations Supervisor</h5>
-                        <p class="card-text">Responsible for managing daily operations, supervising staff, and ensuring smooth functioning of the Kent Student Center.</p>
-                    </div>
-                    <div class="card-footer text-muted">
-                        <span>2024 – Present</span>
-                    </div>
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="row d-flex justify-content-center">
+                <!-- Skill 1 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/python image.png" class="skill-icon" alt="Python">
+                    <div class="skill-title">Python</div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/R.png" class="skill-icon" alt="R">
+                    <div class="skill-title">R</div>
+                </div>
+                <!-- Skill 3 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/C.png" class="skill-icon" alt="C">
+                    <div class="skill-title">C</div>
+                </div>
+                <!-- Skill 4 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/sql-logo.png" class="skill-icon" alt="SQL">
+                    <div class="skill-title">SQL</div>
+                </div>
+                <!-- Skill 5 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/data visualization.webp" class="skill-icon" alt="Data Visualization">
+                    <div class="skill-title">Data Visualization</div>
                 </div>
             </div>
-            <!-- Experience 2 -->
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="icons/SRIT-LOGO.jpeg" class="card-img-top" alt="Class Representative">
-                    <div class="card-body">
-                        <h5 class="card-title">Class Representative</h5>
-                        <p class="card-text">Acted as a liaison between students and faculty, addressing concerns and organizing events to enhance the academic experience.</p>
-                    </div>
-                    <div class="card-footer text-muted">
-                        <span>2019 – 2023</span>
-                    </div>
+
+            <div class="row d-flex justify-content-center mt-4">
+                <!-- Skill 6 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/RStudio.png" class="skill-icon" alt="RStudio">
+                    <div class="skill-title">RStudio</div>
                 </div>
-            </div>
-            <!-- Experience 3 -->
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="icons/NSS.png" class="card-img-top" alt="NSS Volunteer">
-                    <div class="card-body">
-                        <h5 class="card-title">NSS Volunteer</h5>
-                        <p class="card-text">Volunteered in numerous social service activities, including health camps, tree plantations, and educational awareness programs.</p>
-                    </div>
-                    <div class="card-footer text-muted">
-                        <span>2020 – 2022</span>
-                    </div>
+                <!-- Skill 7 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/Visual Studio Code (VS Code).png" class="skill-icon" alt="VS Code">
+                    <div class="skill-title">VS Code</div>
+                </div>
+                <!-- Skill 8 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/jupyter-seeklogo.png" class="skill-icon" alt="Jupyter">
+                    <div class="skill-title">Jupyter</div>
+                </div>
+                <!-- Skill 9 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/GitHub.png" class="skill-icon" alt="GitHub">
+                    <div class="skill-title">GitHub</div>
+                </div>
+                <!-- Skill 10 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/microsoft office.png" class="skill-icon" alt="MS Office">
+                    <div class="skill-title">MS Office</div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section py-5">
+        <div class="container">
+            <h2 class="text-center">Experience</h2>
+            <div class="row">
+                <!-- Experience 1 -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="icons/Kent student Center.jpg" class="card-img-top" alt="Facility Operations Supervisor">
+                        <div class="card-body">
+                            <h5 class="card-title">Facility Operations Supervisor</h5>
+                            <p class="card-text">Responsible for managing daily operations, supervising staff, and ensuring smooth functioning of the Kent Student Center.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <span>2024 – Present</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Experience 2 -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="icons/SRIT-LOGO.jpeg" class="card-img-top" alt="Class Representative">
+                        <div class="card-body">
+                            <h5 class="card-title">Class Representative</h5>
+                            <p class="card-text">Acted as a liaison between students and faculty, addressing concerns and organizing events to enhance the academic experience.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <span>2019 – 2023</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Experience 3 -->
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="icons/NSS.png" class="card-img-top" alt="NSS Volunteer">
+                        <div class="card-body">
+                            <h5 class="card-title">NSS Volunteer</h5>
+                            <p class="card-text">Volunteered in numerous social service activities, including health camps, tree plantations, and educational awareness programs.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <span>2020 – 2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
@@ -568,58 +321,50 @@ section {
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/farookahmedalishaik" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://github.com/farookahmedalishaik" target="_blank"><i class="fab fa-github" style="color: black;"></i></a>
-                
             </div>
         </div>
     </section>
 
-
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Farook Ahmed Ali Shaik. All rights reserved.</p>
+        <p>&copy; 2025 Farook Ahmed Ali Shaik. All rights reserved.</p>
     </footer>
-    
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
+
+    <!-- Bootstrap JS and Popper.js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    
-    <!-- Custom Typing Animation Script -->
+    <!-- Custom JS for typing animation -->
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const typingAnimationElement = document.getElementById('typing-animation');
-    if (typingAnimationElement) {
-        const text = "Data Professional";
-        let charIndex = 0;
-
-        // Ensure the element starts blank
-        typingAnimationElement.textContent = '';
+        const words = ["Data Scientist", "Data Analyst", "Machine Learning Enthusiast"];
+        let i = 0;
+        let j = 0;
+        let currentWord = "";
+        let isDeleting = false;
+        const typingAnimation = document.getElementById("typing-animation");
 
         function type() {
-            if (charIndex < text.length) {
-                typingAnimationElement.textContent += text[charIndex];
-                charIndex++;
-                setTimeout(type, 150); // Adjust typing speed here
+            if (isDeleting) {
+                currentWord = words[i].substring(0, j);
+                j--;
             } else {
-                setTimeout(resetAndType, 2000); // Wait for 2 seconds before restarting
+                currentWord = words[i].substring(0, j);
+                j++;
             }
-        }
+            typingAnimation.textContent = currentWord;
 
-        function resetAndType() {
-            typingAnimationElement.textContent = '';
-            charIndex = 0;
-            type();
+            if (!isDeleting && j === words[i].length) {
+                setTimeout(() => { isDeleting = true; }, 2000);
+            } else if (isDeleting && j === 0) {
+                isDeleting = false;
+                i = (i + 1) % words.length;
+            }
+
+            setTimeout(type, isDeleting ? 100 : 200);
         }
 
         type();
-    }
-});
-
-</script>
-
+    </script>
 </body>
 </html>
-
-
-
