@@ -213,8 +213,12 @@ section {
     max-width: 100%; /* Ensure images don't overflow */
     height: 200px; /* Adjust height to match project images */
      /*object-fit: contain; Displays the whole image while maintaining its aspect ratio */
-    object-fit: cover; /* Displays the whole image while maintaining its aspect ratio */
+    /*object-fit: cover; /* Displays the whole image while maintaining its aspect ratio */
     background-color: #f8f9fa; /* Optional: Adds a background for contrast if the image doesn't fill */
+
+    background-size: 100% 90%; /* Stretch the image to fill the container */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
 }
 
 .experience-section .card-body {
