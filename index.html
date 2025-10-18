@@ -11,315 +11,299 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-<style>
+    <style>
+        /* General Styles */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #ffffff; /* White background */
+            color: #333333; /* Dark gray text */
+            margin: 0;
+            padding-top: 70px; /* To prevent content from hiding under the navbar */
+            scroll-behavior: smooth; /* Smooth scrolling */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
 
+        /* Typography */
+        body, p, h1, h2, h3, h4, h5, h6, li, span, a {
+            color: black;
+        }
+        body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, button {
+            font-family: "Times New Roman", Times, serif;
+        }
 
-    /* General Styles */
-body {
-    font-family: "Times New Roman", Times, serif;
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Dark gray text */
-    margin: 0;
-    padding-top: 70px; /* To prevent content from hiding under the navbar */
-    scroll-behavior: smooth; /* Smooth scrolling */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
+        /* Navbar Styles */
+        .navbar {
+            background-color: #3498db; /* Blue background for navbar */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
 
-/* Typography */
-body, p, h1, h2, h3, h4, h5, h6, li, span, a {
-    color: black;
-}
-body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, button {
-    font-family: "Times New Roman", Times, serif;
-}
+        .navbar-brand {
+            font-family: Montserrat, sans-serif;
+            font-weight: bold;
+            color: #000000; /* White text for navbar brand */
+        }
 
-/* Navbar Styles */
-.navbar {
-    background-color: #3498db; /* Blue background for navbar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
+        .nav-link {
+            color: #000000; /* Text for nav links */
+            font-weight: bold; /* Make the text bold */
+        }
 
-.navbar-brand {
-    font-family: Montserrat, sans-serif;
-    font-weight: bold;
-    color: #000000; /* White text for navbar brand */
-}
+        .nav-link:hover {
+            color: #f39c12 !important; /* A golden hover effect for nav links */
+        }
 
-.nav-link {
-    color: #000000; /* Text for nav links */
-    font-weight: bold; /* Make the text bold */
-}
+        /* Section General Styles */
+        section {
+            text-align: center;
+            padding: 60px 0; /* Standard padding for all sections */
+            position: relative;
+        }
 
-.nav-link:hover {
-    color: #f39c12 !important; /* A golden hover effect for nav links */
-}
+        /* Home Section */
+        #home {
+            padding: 100px 0; /* Add padding for proper alignment */
+        }
 
-/* Section General Styles */
-section {
-    text-align: center;
-    padding: 60px 0; /* Standard padding for all sections */
-    position: relative;
-}
+        .home-section .home-content {
+            display: flex;
+            align-items: center;
+        }
 
-/* Home Section */
-#home {
-    padding: 100px 0; /* Add padding for proper alignment */
-}
+        .home-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            object-fit: cover;
+            margin-right: 30px; /* Maintain space between image and text */
+            margin-left: 0; /* Remove margin on the left side to place the image on the far left */
+        }
 
-.home-section .home-content {
-    display: flex;
-    align-items: center;
-}
+        .home-section .name-and-animation {
+            display: flex;
+            flex-direction: column;
+            text-align: center; /* Center the text vertically */
+        }
 
-.home-section img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #e0e0e0;
-    object-fit: cover;
-    margin-right: 30px; /* Maintain space between image and text */
-    margin-left: 0; /* Remove margin on the left side to place the image on the far left */
-}
+        .home-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            font-family: Montserrat, sans-serif;
+        }
 
-.home-section .name-and-animation {
-    display: flex;
-    flex-direction: column;
-    text-align: center; /* Center the text vertically */
-}
+        .home-section h2 {
+            font-size: 2rem;
+            margin-top: 20px;
+            font-family: Montserrat, sans-serif;
+        }
 
-.home-section h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: Montserrat, sans-serif;
-}
+        #typing-animation {
+            display: inline-block;
+            line-height: 1.5em; /* Adjust the line height for uniformity */
+            height: 2em; /* Set a fixed height */
+        }
 
-.home-section h2 {
-    font-size: 2rem;
-    margin-top: 20px;
-    font-family: Montserrat, sans-serif;
-}
+        .home-section .about-text {
+            width: 100%; /* Make the paragraph take up the full width of the container */
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify; /* Justify the text to fill the width */
+            margin: 0; /* Remove any margins */
+            margin-top: 1em; /* Add 1em (one line) gap from the container above */
+        }
 
-#typing-animation {
-    display: inline-block;
-    line-height: 1.5em; /* Adjust the line height for uniformity */
-    height: 2em; /* Set a fixed height */
-}
+        /* About, Projects, Skills, Experience, Contact Section Headings */
+        .about-section h2,
+        .projects-section h2,
+        .skills-section h2,
+        .experience-section h2,
+        .contact-section h2 {
+            font-weight: bold;
+            color: black;
+            font-size: 2rem; /* Adjust size if needed */
+        }
 
-.home-section .about-text {
-    width: 100%; /* Make the paragraph take up the full width of the container */
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: justify; /* Justify the text to fill the width */
-    margin: 0; /* Remove any margins */
-    margin-top: 1em; /* Add 1em (one line) gap from the container above */
-}
+        /* Projects Section */
+        .projects-section {
+            background-color: #ffffff; /* White background */
+        }
 
-/* About, Projects, Skills, Experience, Contact Section Headings */
-.about-section h2,
-.projects-section h2,
-.skills-section h2,
-.experience-section h2,
-.contact-section h2 {
-    font-weight: bold;
-    color: black;
-    font-size: 2rem; /* Adjust size if needed */
-}
+        .projects-section .card {
+            /* width: 300px; /* Adjust width as needed */
+            margin-bottom: 30px;
+        }
 
-/* Projects Section */
-.projects-section {
-    background-color: #ffffff; /* White background */
-}
+        .projects-section .card-body {
+            height: 100px;
+            overflow: hidden; /* Hide overflowing text */
+            text-overflow: ellipsis; /* Add ellipsis for truncated text */
+        }
 
-.projects-section .card {
-    /* width: 300px; /* Adjust width as needed */
-    margin-bottom: 30px;
-}
+        .projects-section .card-img-top {
+            max-width: 100%; /* Ensures images don't overflow */
+            height: 200px; /* Adjust height as needed */
+            /* object-fit: cover; /* Ensures the image fills the container without stretching */
+            /*object-fit: contain;  Ensures the image fills the container without stretching */
+            background-color: #f8f9fa; /* Optional: Adds a background for contrast if the image doesn't fill */
+            background-size: 100% 85%; /* Stretch the image to fill the container */
+            background-position: center center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+        }
 
-.projects-section .card-body {
-    height: 100px;
-    overflow: hidden; /* Hide overflowing text */
-    text-overflow: ellipsis; /* Add ellipsis for truncated text */
-}
+        .projects-section .card-footer a {
+            font-weight: bold;
+            color: #3498db; /* Bright blue for links */
+            text-decoration: none;
+        }
 
-.projects-section .card-img-top {
-    max-width: 100%; /* Ensures images don't overflow */
-    height: 200px; /* Adjust height as needed */
-    /* object-fit: cover; /* Ensures the image fills the container without stretching */
-    /*object-fit: contain;  Ensures the image fills the container without stretching */
-    background-color: #f8f9fa; /* Optional: Adds a background for contrast if the image doesn't fill */
+        .projects-section .card-footer a:hover {
+            text-decoration: underline;
+        }
 
-    background-size: 100% 85%; /* Stretch the image to fill the container */
-    background-position: center center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-}
+        .projects-section .row {
+            display: flex;  /* Ensure row is a flex container */
+            flex-wrap: wrap; /* Add this rule to make rows wrap */
+        }
 
-.projects-section .card-footer a {
-    font-weight: bold;
-    color: #3498db; /* Bright blue for links */
-    text-decoration: none;
-}
+        /* Skills Section */
+        .skills-section {
+            background-color: #ffffff; /* White background */
+        }
 
-.projects-section .card-footer a:hover {
-    text-decoration: underline;
-}
+        .skills-section .skill-title {
+            font-weight: bold;
+            margin-top: 20px;
+            font-family: Montserrat, sans-serif;
+        }
 
-.projects-section .row {
-    display: flex;  /* Ensure row is a flex container */
-    flex-wrap: wrap; /* Add this rule to make rows wrap */
-}
+        .skills-section .skill-icon {
+            width: 80px;
+            height: 80px;
+        }
 
+        .skills-section .skill-text {
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 16px;
+            line-height: 1.6;
+        }
 
+        /* Experience Section */
+        .experience-section {
+            padding-top: 60px !important;  /* Use !important to override general section padding */
+            /*margin-top: 60px;   Add margin to create additional space */
+            background-color: #ffffff;
+            position: relative;  /* Add position relative */
+            z-index: 1;  /* Lower z-index than navbar */
+        }
 
-/* Skills Section */
-.skills-section {
-    background-color: #ffffff; /* White background */
-}
+        .experience-section .card {
+            margin-bottom: 30px; /* Adjust space between cards */
+        }
 
-.skills-section .skill-title {
-    font-weight: bold;
-    margin-top: 20px;
-    font-family: Montserrat, sans-serif;
-}
+        .experience-section .card-img-top {
+            max-width: 100%; /* Ensure images don't overflow */
+            height: 200px; /* Adjust height to match project images */
+            /*object-fit: contain; Displays the whole image while maintaining its aspect ratio */
+            /*object-fit: cover; /* Displays the whole image while maintaining its aspect ratio */
+            background-color: #f8f9fa; /* Optional: Adds a background for contrast if the image doesn't fill */
+            background-size: 100% 90%; /* Stretch the image to fill the container */
+            background-position: center center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+        }
 
-.skills-section .skill-icon {
-    width: 80px;
-    height: 80px;
-}
+        .experience-section .card-body {
+            height: 100px; /* Limit the height of text section */
+            overflow: hidden; /* Hide overflowing text */
+            text-overflow: ellipsis; /* Add ellipsis to truncated text */
+        }
 
-.skills-section .skill-text {
-    max-width: 700px;
-    margin: 20px auto;
-    font-size: 16px;
-    line-height: 1.6;
-}
+        .experience-section .card-title {
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
 
-/* Experience Section */
-.experience-section {
-    padding-top: 60px !important;  /* Use !important to override general section padding */
-    /*margin-top: 60px;   Add margin to create additional space */
-    background-color: #ffffff;
-    position: relative;  /* Add position relative */
-    z-index: 1;  /* Lower z-index than navbar */
-}
+        .experience-section .card-text {
+            font-size: 14px;
+            line-height: 1.6;
+        }
 
-.experience-section .card {
-    margin-bottom: 30px; /* Adjust space between cards */
-}
+        .experience-section .card-footer a {
+            font-weight: bold;
+            color: #3498db; /* Same link color as projects section */
+            text-decoration: none;
+        }
 
-.experience-section .card-img-top {
-    max-width: 100%; /* Ensure images don't overflow */
-    height: 200px; /* Adjust height to match project images */
-     /*object-fit: contain; Displays the whole image while maintaining its aspect ratio */
-    /*object-fit: cover; /* Displays the whole image while maintaining its aspect ratio */
-    background-color: #f8f9fa; /* Optional: Adds a background for contrast if the image doesn't fill */
+        .experience-section .card-footer a:hover {
+            text-decoration: underline;
+        }
 
-    background-size: 100% 90%; /* Stretch the image to fill the container */
-    background-position: center center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-}
+        .experience-section .row {
+            display: flex;
+            flex-wrap: wrap; /* Ensure rows wrap for responsiveness */
+        }
 
-.experience-section .card-body {
-    height: 100px; /* Limit the height of text section */
-    overflow: hidden; /* Hide overflowing text */
-    text-overflow: ellipsis; /* Add ellipsis to truncated text */
-}
+        /* Contact Section */
+        .contact-section {
+            background-color: #ffffff; /* White background */
+            color: #333333; /* Dark gray text */
+        }
 
-.experience-section .card-title {
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-}
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
 
-.experience-section .card-text {
-    font-size: 14px;
-    line-height: 1.6;
-}
+        .contact-info div i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
 
+        .social-icons a {
+            background-color: #3498db; /* Bright blue for social icons */
+            color: white;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            margin: 0 10px;
+            display: inline-block;
+            text-align: center;
+            font-size: 24px;
+            transition: background-color 0.3s;
+        }
 
+        .social-icons a:hover {
+            background-color: #2980b9; /* Darker blue for hover effect */
+            text-decoration: none;
+        }
 
-.experience-section .card-footer a {
-    font-weight: bold;
-    color: #3498db; /* Same link color as projects section */
-    text-decoration: none;
-}
+        /* Footer */
+        footer {
+            background-color: #ffffff; /* White background */
+            color: #333333; /* Dark gray text */
+            text-align: center;
+            padding: 20px 0;
+        }
 
-.experience-section .card-footer a:hover {
-    text-decoration: underline;
-}
+        /* Miscellaneous */
+        .hover-link {
+            color: #3498db; /* Bright blue for links */
+            text-decoration: none; /* No underline by default */
+        }
 
-.experience-section .row {
-    display: flex;
-    flex-wrap: wrap; /* Ensure rows wrap for responsiveness */
-}
-
-
-
-/* Contact Section */
-.contact-section {
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Dark gray text */
-}
-
-.contact-info div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.contact-info div i {
-    font-size: 24px;
-    margin-right: 10px;
-}
-
-.social-icons a {
-    background-color: #3498db; /* Bright blue for social icons */
-    color: white;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 50%;
-    margin: 0 10px;
-    display: inline-block;
-    text-align: center;
-    font-size: 24px;
-    transition: background-color 0.3s;
-}
-
-.social-icons a:hover {
-    background-color: #2980b9; /* Darker blue for hover effect */
-    text-decoration: none;
-}
-
-/* Footer */
-footer {
-    background-color: #ffffff; /* White background */
-    color: #333333; /* Dark gray text */
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* Miscellaneous */
-.hover-link {
-    color: #3498db; /* Bright blue for links */
-    text-decoration: none; /* No underline by default */
-}
-
-.hover-link:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-    
-</style>
-
-
-
-
+        .hover-link:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -334,13 +318,11 @@ footer {
                     <li class="nav-item">
                         <a class="nav-link" href="#home">Home</a>
                     </li>
-
                     <!--
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     -->
-                    
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">Projects</a>
                     </li>
@@ -373,7 +355,7 @@ footer {
             <!-- About Text (Isolated below the profile picture and name) -->
             <div class="about-text">
                 <p>I am a highly motivated Data Science graduate student with a strong foundation in data analysis & visualisation, extracting insights, statistical modeling, and machine learning. My passion lies in leveraging data to extract actionable insights, solve complex problems and visualise them. Throughout my academic journey, I have honed my analytical skills and gained expertise in Tableau, Python, R, SQL, and various machine learning models, including ensemble methods, as well as familiarity with neural networks.</p>
-                <p>Currently pursuing my Master’s at Kent State University with a 3.93 GPA, I am committed to academic excellence. My coursework has provided me with a deep understanding of machine learning, hands-on experience with frameworks such as SQLite and Flask, and proficiency in data analysis, visualization, and applying machine learning techniques to real-world challenges.</p>
+                <p>Currently pursuing my Master's at Kent State University with a 3.93 GPA, I am committed to academic excellence. My coursework has provided me with a deep understanding of machine learning, hands-on experience with frameworks such as SQLite and Flask, and proficiency in data analysis, visualization, and applying machine learning techniques to real-world challenges.</p>
             </div>
         </div>
     </section>
@@ -383,22 +365,19 @@ footer {
         <div class="container">
             <h2>Projects</h2>
             <div class="row">
-
-    <! Project 1 -->
-    <div class="col-sm-6 col-md-4">
-        <div class="card mb-4 shadow-sm">
-            <img src="icons/your_new_image.jpg" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-                <p class="card-text">Chat Intent Prediction Pipeline Project.</p>
-            </div>
-            <div class="card-footer text-muted">
-                <a href="link_to_project_4" target="_blank">View Project</a>
-                 <a href="https://chat-intent-pipeline-farook.streamlit.app" target="_blank">View Project</a>/
-
-            </div>
-        </div>
-    </div>
-</div>
+                <!-- Project 1 -->
+                <div class="col-sm-6 col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="icons/your_new_image.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <p class="card-text">Chat Intent Prediction Pipeline Project.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <!-- <a href="link_to_project_4" target="_blank">View Project</a> -->
+                            <a href="https://chat-intent-pipeline-farook.streamlit.app" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
                 <!-- Project 2 -->
                 <div class="col-sm-6 col-md-4">
                     <div class="card mb-4 shadow-sm">
@@ -408,14 +387,12 @@ footer {
                             <p class="card-text">Providing Insights for a Strategic Merger in the OTT.</p>
                         </div>
                         <div class="card-footer text-muted">
-                            <a href="https://public.tableau.com/app/profile/farook.ahmed.ali.shaik/viz/RPC14_17487526849010/Home?publish=yes">View Project</a>
+                            <!-- <a href="https://public.tableau.com/app/profile/farook.ahmed.ali.shaik/viz/RPC14_17487526849010/Home?publish=yes">View Project</a> -->
                             <a href="https://github.com/farookahmedalishaik/Projects/blob/main/OTT%20Merge%20Insights/README.md" target="_blank">View Project</a>
                         </div>
                     </div>
-                </div>                
-                
-
-               <!-- Project 3 --> 
+                </div>
+                <!-- Project 3 -->
                 <div class="col-sm-6 col-md-4">
                     <div class="card mb-4 shadow-sm">
                         <img src="icons/telecom 2.jpeg" class="card-img-top" alt="Project 3">
@@ -428,7 +405,6 @@ footer {
                         </div>
                     </div>
                 </div>
-                
                 <!-- Project 4 -->
                 <div class="col-sm-6 col-md-4">
                     <div class="card mb-4 shadow-sm">
@@ -442,78 +418,73 @@ footer {
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
 
-<!-- Skills Section --> 
+    <!-- Skills Section -->
     <section id="skills" class="skills-section">
-    <div class="container">
-        <h2>Skills</h2>
-        
-        <div class="row d-flex justify-content-center">
-            <!-- Skill 1 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/Tableau logo.png" class="skill-icon" alt="Tableau">
-                <div class="skill-title">Tableau</div>
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="row d-flex justify-content-center">
+                <!-- Skill 1 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/Tableau logo.png" class="skill-icon" alt="Tableau">
+                    <div class="skill-title">Tableau</div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/sql-logo.png" class="skill-icon" alt="SQL">
+                    <div class="skill-title">SQL</div>
+                </div>
+                <!-- Skill 3 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/python image.png" class="skill-icon" alt="Python">
+                    <div class="skill-title">Python</div>
+                </div>
+                <!-- Skill 4 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/R.png" class="skill-icon" alt="R">
+                    <div class="skill-title">R</div>
+                </div>
+                <!-- Skill 5 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/hugging face.png" class="skill-icon" alt="hugging face">
+                    <div class="skill-title">Hugging Face</div>
+                </div>
+                <!-- Skill 6 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/GitHub.png" class="skill-icon" alt="GitHub">
+                    <div class="skill-title">GitHub</div>
+                </div>
+                <!-- Skill 7 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/RStudio.png" class="skill-icon" alt="RStudio">
+                    <div class="skill-title">RStudio</div>
+                </div>
+                <!-- Skill 8 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/Visual Studio Code (VS Code).png" class="skill-icon" alt="VS Code">
+                    <div class="skill-title">VS Code</div>
+                </div>
+                <!-- Skill 9 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/jupyter-seeklogo.png" class="skill-icon" alt="Jupyter">
+                    <div class="skill-title">Jupyter Notebook</div>
+                </div>
+                <!-- Skill 10 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/streamlit.png" class="skill-icon" alt="streamlit">
+                    <div class="skill-title">Streamlit</div>
+                </div>
+                <!-- Skill 11 -->
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
+                    <img src="icons/microsoft office.png" class="skill-icon" alt="MS Office">
+                    <div class="skill-title">MS Office</div>
+                </div>
             </div>
-<!-- Skill 2 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/sql-logo.png" class="skill-icon" alt="SQL">
-                <div class="skill-title">SQL</div>
-            </div>
- <!-- Skill 3 -->           
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/python image.png" class="skill-icon" alt="Python">
-                <div class="skill-title">Python</div>
-            </div>
-  <!-- Skill 4 -->          
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/R.png" class="skill-icon" alt="R">
-                <div class="skill-title">R</div>
-            </div>
-          <!-- Skill 5 -->  
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/hugging face.png" class="skill-icon" alt="hugging face">
-                <div class="skill-title">Hugging Face</div>
-            </div>
-<!-- Skill 6 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/GitHub.png" class="skill-icon" alt="GitHub">
-                <div class="skill-title">GitHub</div>
-            </div>
-<!-- Skill 7 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/RStudio.png" class="skill-icon" alt="RStudio">
-                <div class="skill-title">RStudio</div>
-            </div>
-<!-- Skill 8 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/Visual Studio Code (VS Code).png" class="skill-icon" alt="VS Code">
-                <div class="skill-title">VS Code</div>
-            </div>
-<!-- Skill 9 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/jupyter-seeklogo.png" class="skill-icon" alt="Jupyter">
-                <div class="skill-title">Jupyter Notebook</div>
-            </div>
-<!-- Skill 10 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/streamlit.png" class="skill-icon" alt="streamlit">
-                <div class="skill-title">Streamlit</div>
-            </div>
-<!-- Skill 11 -->
-            <div class="col-sm-6 col-md-4 col-lg-2 text-center mb-4">
-                <img src="icons/microsoft office.png" class="skill-icon" alt="MS Office">
-                <div class="skill-title">MS Office</div>
-            </div>
-            
         </div>
-        </div>
-</section>
-
+    </section>
 
     <!-- Experience Section -->
     <section id="experience" class="experience-section py-5">
@@ -576,12 +547,8 @@ footer {
                     <span>Email: farookahmedalishaik@gmail.com</span>
                 </div>
                 <div>
-                    <i class="fas fa-phone"></i>
-                    <span>Phone: (234) 282-9550</span>
-                </div>
-                <div>
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Location: Kent, Ohio, USA</span>
+                    <span>Location: USA</span>
                 </div>
             </div>
             <div class="social-icons">
@@ -632,10 +599,5 @@ footer {
             }
         });
     </script>
-
 </body>
 </html>
-    
-    
-
-
